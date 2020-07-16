@@ -4,9 +4,9 @@
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace ZFTest\OAuth2\Doctrine\Identity;
+namespace ApiSkeletonsTest\OAuth2\Doctrine\Identity;
 
-use Zend\Loader\AutoloaderFactory;
+use Laminas\Loader\AutoloaderFactory;
 use RuntimeException;
 
 error_reporting(E_ALL | E_STRICT);
@@ -26,10 +26,10 @@ class Bootstrap
     {
         $config = __DIR__ . '/asset/autoload/oauth2.doctrine-orm.global.php';
         copy(
-            __DIR__ . '/../vendor/api-skeletons/zf-oauth2-doctrine/config/oauth2.doctrine-orm.global.php.dist',
+            __DIR__ . '/../vendor/api-skeletons/oauth2-doctrine/config/oauth2.doctrine-orm.global.php.dist',
             $config
         );
-        `find $config -type f -exec sed -i '' -e 's/ZFTest\\\\OAuth2\\\\Doctrine\\\\Entity\\\\User/ZFTest\\\\OAuth2\\\\Doctrine\\\\Identity\\\\Entity\\\\User/g' {} \;`;
+        `find $config -type f -exec sed -i '' -e 's/ZFTest\\\\OAuth2\\\\Doctrine\\\\Entity\\\\User/ApiSkeletons\\\\OAuth2\\\\Doctrine\\\\Identity\\\\Entity\\\\User/g' {} \;`;
 
         static::initAutoloader();
     }
@@ -43,21 +43,21 @@ class Bootstrap
             return;
         }
 
-        $zf2Path = getenv('ZF2_PATH') ?: (defined('ZF2_PATH') ? ZF2_PATH : (is_dir($vendorPath . '/ZF2/library') ? $vendorPath . '/ZF2/library' : false));
+        $laminasPath = getenv('LAMINAS_PATH') ?: (defined('LAMINAS_PATH') ? ZF2_PATH : (is_dir($vendorPath . '/Laminas/library') ? $vendorPath . '/Laminas/library' : false));
 
-        if (!$zf2Path) {
-            throw new RuntimeException('Unable to load ZF2. Run `php composer.phar install` or define a ZF2_PATH environment variable.');
+        if (!$laminasPath) {
+            throw new RuntimeException('Unable to load Laminas. Run `php composer.phar install` or define a LAMINAS_PATH environment variable.');
         }
 
         if (isset($loader)) {
-            $loader->add('Zend', $zf2Path . '/Zend');
+            $loader->add('Zend', $laminasPath . '/Zend');
         } else {
-            include $zf2Path . '/Zend/Loader/AutoloaderFactory.php';
+            include $laminasPath . '/Laminas/Loader/AutoloaderFactory.php';
             AutoloaderFactory::factory(array(
-                'Zend\Loader\StandardAutoloader' => array(
+                'Laminas\Loader\StandardAutoloader' => array(
                     'autoregister_zf' => true,
                     'namespaces' => array(
-                        'ZF\OAuth2\Doctrine\Identity' => __DIR__ . '/../src/',
+                        'ApiSkeletons\OAuth2\Doctrine\Identity' => __DIR__ . '/../src/',
                         __NAMESPACE__ => __DIR__,
                     ),
                 ),

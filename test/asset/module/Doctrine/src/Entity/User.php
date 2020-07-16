@@ -1,9 +1,9 @@
 <?php
 
-namespace ZFTest\OAuth2\Doctrine\Identity\Entity;
+namespace ApiSkeletons\OAuth2\Doctrine\Identity\Entity;
 
-use ZF\OAuth2\Doctrine\Entity\UserInterface;
-use Zend\Stdlib\ArraySerializableInterface;
+use Laminas\ApiTools\OAuth2\Doctrine\Entity\UserInterface;
+use Laminas\Stdlib\ArraySerializableInterface;
 
 class User implements
     UserInterface,
@@ -63,7 +63,8 @@ class User implements
             'profile' => $this->getProfile(),
             'email' => $this->getEmail(),
             'country' => $this->getCountry(),
-            'phone_number' => $this->getPhoneNumber(), // underscore formatting for openid
+            // underscore formatting for openid
+            'phone_number' => $this->getPhoneNumber(),
             'phoneNumber' => $this->getPhoneNumber(),
         ];
     }
