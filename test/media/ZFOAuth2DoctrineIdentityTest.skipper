@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<skipper version="3.2.7.1338" mvc="Without MVC" orm="Doctrine2" name="api-tools-oauth2-doctrine-identity" uuid="b9373761-2af6-4a3b-88c8-6291e4b09235">
-  <module name="\ACL" local-name="ACL" namespace="\ZFTest\OAuth2\Doctrine\Identity\Entity" local-namespace="ZFTest\OAuth2\Doctrine\Identity\Entity" export-format="Doctrine2Xml" export-path="../asset/module/Doctrine/config/orm" uuid="b6eeda23-9d51-4019-99a0-544a7d024c24">
-    <entity name="\ZFTest\OAuth2\Doctrine\Identity\Entity\User" local-name="User" namespace="\ZFTest\OAuth2\Doctrine\Identity\Entity" uuid="888a6a37-9d0c-497f-accc-ec5ab40235fe">
+<skipper version="3.2.24.1662" mvc="Without MVC" orm="Doctrine2" name="api-tools-oauth2-doctrine-identity" uuid="b9373761-2af6-4a3b-88c8-6291e4b09235">
+  <module name="\ACL" local-name="ACL" namespace="\ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity" local-namespace="ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity" export-format="Doctrine2Xml" export-path="../asset/module/Doctrine/config/orm" uuid="b6eeda23-9d51-4019-99a0-544a7d024c24">
+    <entity name="\ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity\User" local-name="User" namespace="\ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity" uuid="888a6a37-9d0c-497f-accc-ec5ab40235fe">
       <field name="id" type="bigint" required="true" unique="true" primary="true" auto-increment="true" uuid="5f7ae726-7073-4df0-a9d2-06724ad89d60"/>
       <field name="username" type="string" uuid="37cec636-9384-429b-8014-f291e8522298"/>
       <field name="password" type="string" uuid="6347ec81-1bc9-48cc-827a-de6e307794d0"/>

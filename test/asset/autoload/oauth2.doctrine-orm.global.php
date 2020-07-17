@@ -64,6 +64,10 @@ return [
                         ],
                     ],
                 ],
+                'scope_entity' => [
+                    'entity' => 'ApiSkeletons\OAuth2\Doctrine\Entity\Scope',
+                    'field' => 'scope',
+                ],
             ],
             'mapping' => [
                 'User' => [
@@ -310,7 +314,7 @@ return [
                         'scope' => [
                             'type' => 'field',
                             'name' => 'scope',
-                            'datatype' => 'text',
+                            'datatype' => 'string',
                         ],
                         'is_default' => [
                             'type' => 'field',

@@ -29,7 +29,7 @@ class Bootstrap
             __DIR__ . '/../vendor/api-skeletons/oauth2-doctrine/config/oauth2.doctrine-orm.global.php.dist',
             $config
         );
-        `find $config -type f -exec sed -i '' -e 's/ZFTest\\\\OAuth2\\\\Doctrine\\\\Entity\\\\User/ApiSkeletons\\\\OAuth2\\\\Doctrine\\\\Identity\\\\Entity\\\\User/g' {} \;`;
+        `find $config -type f -exec sed -i '' -e 's/Testing\\\\Entity\\\\User/ApiSkeletonsTest\\\\OAuth2\\\\Doctrine\\\\Identity\\\\Entity\\\\User/g' {} \;`;
 
         static::initAutoloader();
     }
@@ -50,14 +50,14 @@ class Bootstrap
         }
 
         if (isset($loader)) {
-            $loader->add('Zend', $laminasPath . '/Zend');
+            $loader->add('Laminas', $laminasPath . '/Laminas');
         } else {
             include $laminasPath . '/Laminas/Loader/AutoloaderFactory.php';
             AutoloaderFactory::factory(array(
                 'Laminas\Loader\StandardAutoloader' => array(
                     'autoregister_zf' => true,
                     'namespaces' => array(
-                        'ApiSkeletons\OAuth2\Doctrine\Identity' => __DIR__ . '/../src/',
+                        'ApiSkeletons\OAuth2\Doctrine\Identity' => realpath(__DIR__ . '/../src/'),
                         __NAMESPACE__ => __DIR__,
                     ),
                 ),

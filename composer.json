@@ -1,5 +1,5 @@
 {
-    "name": "api-skeletons/api-tools-oauth2-doctrine-identity",
+    "name": "api-skeletons/oauth2-doctrine-identity",
     "description": "Doctrine Enabled AuthenticatedIdentity",
     "type": "library",
     "license": "MIT",
@@ -7,7 +7,8 @@
         "oauth2",
         "doctrine",
         "apigility",
-        "identity"
+        "identity",
+        "laminas"
     ],
     "authors": [
         {
@@ -18,30 +19,30 @@
     "require": {
         "php": "^7.3",
         "container-interop/container-interop": "^1.1",
-        "api-skeletons/oauth2-doctrine": "^4.0",
+        "api-skeletons/oauth2-doctrine": "^5.0",
         "bshaffer/oauth2-server-php": "^1.10",
         "gianarb/angry": "^0.1",
         "laminas/laminas-dependency-plugin": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7",
-        "satooshi/php-coveralls": "^1.0",
+        "api-skeletons/coding-standard": "^1.0",
+        "laminas/laminas-hydrator": "^2.2",
+        "laminas/laminas-i18n": "^2.7",
         "laminas/laminas-test": "^3.0",
         "laminas-api-tools/api-tools": "^1.4.1",
         "laminas-api-tools/api-tools-doctrine": "^2.3.0",
-        "laminas/laminas-i18n": "^2.7",
-        "laminas/laminas-hydrator": "^2.2",
-        "api-skeletons/coding-standard": "^1.0",
-        "phpro/zf-doctrine-hydration-module": "^2.0 || ^3.0"
+        "phpunit/phpunit": "^5.7",
+        "phpro/zf-doctrine-hydration-module": "^2.0.1 || ^3.0 || ^4.1",
+        "satooshi/php-coveralls": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "ApiSkeleetons\\OAuth2\\Doctrine\\Identity\\": "src/"
+            "ApiSkeletons\\OAuth2\\Doctrine\\Identity\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiSkeletonsTest\\OAuth2\\Doctrine\\Identity\\": "test/"
+            "ApiSkeletonsTest\\OAuth2\\Doctrine\\Identity\\": "test/Identity/"
         }
     },
     "extra": {

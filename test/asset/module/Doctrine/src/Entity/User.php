@@ -1,8 +1,8 @@
 <?php
 
-namespace ApiSkeletons\OAuth2\Doctrine\Identity\Entity;
+namespace ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity;
 
-use Laminas\ApiTools\OAuth2\Doctrine\Entity\UserInterface;
+use ApiSkeletons\OAuth2\Doctrine\Entity\UserInterface;
 use Laminas\Stdlib\ArraySerializableInterface;
 
 class User implements

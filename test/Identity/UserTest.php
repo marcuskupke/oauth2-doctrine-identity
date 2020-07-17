@@ -42,7 +42,7 @@ class UserTest extends AbstractTest
         $identity = $authorization->getIdentity();
 
         $this->assertTrue($identity instanceof \ApiSkeletons\OAuth2\Doctrine\Identity\AuthenticatedIdentity);
-        $this->assertTrue($identity->getUser() instanceof \ApiSkeletons\OAuth2\Doctrine\Identity\Entity\User);
+        $this->assertTrue($identity->getUser() instanceof \ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity\User);
         $this->assertTrue($identity->getClient() instanceof \ApiSkeletons\OAuth2\Doctrine\Entity\Client);
         $this->assertTrue($identity->getAccessToken() instanceof \ApiSkeletons\OAuth2\Doctrine\Entity\AccessToken);
         $this->assertTrue(

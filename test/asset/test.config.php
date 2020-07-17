@@ -47,8 +47,8 @@ return [
         // Module class.
         'module_paths' => [
             __DIR__ . '/../../vendor',
-            'Laminas\\ApiTools\\OAuth2\\Doctrine\\Identity' => __DIR__ . '/../src',
-            'ZFTest\\OAuth2\\Doctrine\\Identity' => __DIR__ . '/module/Doctrine',
+            'ApiSkeletons\\ApiTools\\OAuth2\\Doctrine\\Identity' => __DIR__ . '/../src',
+            'ApiSkeletonsTest\\OAuth2\\Doctrine\\Identity' => __DIR__ . '/module/Doctrine',
             'TestApi' => __DIR__ . '/module/TestApi',
         ],
 

@@ -12,7 +12,7 @@ return [
             'orm_default' => [
                 'class' => 'Doctrine\\ORM\\Mapping\\Driver\\DriverChain',
                 'drivers' => [
-                    'ApiSkeletons\\OAuth2\\Doctrine\\Identity\\Entity' => 'test_driver',
+                    'ApiSkeletonsTest\\OAuth2\\Doctrine\\Identity\\Entity' => 'test_driver',
                 ],
             ],
         ],

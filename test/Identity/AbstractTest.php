@@ -5,7 +5,7 @@ namespace ApiSkeletonsTest\OAuth2\Doctrine\Identity;
 use Datetime;
 use Exception;
 use Doctrine\ORM\Tools\SchemaTool;
-use Laminas\ApiTools\OAuth2\Doctrine\Entity;
+use ApiSkeletons\OAuth2\Doctrine\Entity;
 use Laminas\Crypt\Password\Bcrypt;
 use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 use ApiSkeletonsTest\OAuth2\Doctrine\Identity\Entity\User;
