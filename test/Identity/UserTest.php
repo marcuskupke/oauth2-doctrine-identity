@@ -46,7 +46,8 @@ class UserTest extends AbstractTest
         $this->assertTrue($identity->getClient() instanceof \ApiSkeletons\OAuth2\Doctrine\Entity\Client);
         $this->assertTrue($identity->getAccessToken() instanceof \ApiSkeletons\OAuth2\Doctrine\Entity\AccessToken);
         $this->assertTrue(
-            $identity->getAuthorizationService() instanceof \Laminas\ApiTools\MvcAuth\Authorization\AuthorizationInterface
+            $identity->getAuthorizationService()
+                instanceof \Laminas\ApiTools\MvcAuth\Authorization\AuthorizationInterface
         );
         $this->assertEquals('doctrine', $identity->getRoleId());
         $this->assertTrue(is_array($identity->getAuthenticationIdentity()));
