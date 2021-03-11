@@ -9,6 +9,7 @@ cache:
 env:
   global:
     - COMPOSER_ARGS="--no-interaction"
+    - XDEBUG_MODE=coverage
 
 matrix:
   fast_finish: true
@@ -20,7 +21,7 @@ matrix:
       env:
         - DEPS=latest
         - EXECUTE_COVERAGE=true
-        - EXECUTE_CS_CHECK=true 
+        - EXECUTE_CS_CHECK=true
     - php: 7.4
 
   allow_failures:
