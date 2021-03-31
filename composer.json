@@ -21,7 +21,7 @@
         "container-interop/container-interop": "^1.1",
         "api-skeletons/oauth2-doctrine": "^5.0",
         "bshaffer/oauth2-server-php": "^1.10",
-        "gianarb/angry": "^0.1",
+        "gianarb/angry": "^1.0",
         "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {
