@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ^8.0",
         "container-interop/container-interop": "^1.1",
         "api-skeletons/oauth2-doctrine": "^5.0",
         "bshaffer/oauth2-server-php": "^1.10",
